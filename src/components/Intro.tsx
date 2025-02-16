@@ -19,7 +19,8 @@ const Intro: React.FC = () => {
       <div className="mt-10 md:mt-0 md:ml-20 md:width-1/2">
         <h1 className="text-5xl md:text-7xl uppercase">{user.title}</h1>
         <h1 className="text-3xl md:text-4xl mt-5">
-          Hi, I'm <span className="text-red-600 md:text-5xl">{user.name}</span>
+          Hi, I&#39;m{" "}
+          <span className="text-red-600 md:text-5xl">{user.name}</span>
         </h1>
       </div>
     </section>
