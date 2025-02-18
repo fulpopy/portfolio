@@ -3,6 +3,7 @@ import { useState } from "react";
 import { NavItems } from "@/models/NavItem";
 import { user, navItems } from "../constants/constant";
 import { BiMenu } from "react-icons/bi";
+import { Link as ScrollLink } from "react-scroll";
 const Header: React.FC = () => {
   const [showMenu, setShowMenu] = useState<boolean>(false);
   return (
@@ -21,12 +22,15 @@ const Header: React.FC = () => {
         } flex flex-col md:flex-row space-y-2 md:space-y-0 align-right items-end`}
       >
         {Object.keys(navItems).map((item) => (
-          <a
+          <ScrollLink
+            to={navItems[item as keyof NavItems].path}
+            smooth={true}
             className="block md:inline-block cursor-pointer"
+            spy={true}
             key={navItems[item as keyof NavItems].label}
           >
             {navItems[item as keyof NavItems].label}
-          </a>
+          </ScrollLink>
         ))}
       </div>
     </header>
