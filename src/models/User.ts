@@ -5,4 +5,7 @@ export interface User {
   email: string;
   phone: string;
   avatar: string;
+  heading: string;
+  about: string;
+  skills: string[];
 }
