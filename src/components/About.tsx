@@ -24,8 +24,11 @@ const About: React.FC = () => {
           className="rounded-full shadow-2xl mt-10"
         />
         <div className="break-words w-3/4 mt-3">
-          {user.skills.map((skill) => (
-            <span className="bg-gray-200 m-1 p-2 rounded-md inline-block text-sm">
+          {user.skills.map((skill, idx) => (
+            <span
+              key={idx}
+              className="bg-gray-200 m-1 p-2 rounded-md inline-block text-sm"
+            >
               {skill}
             </span>
           ))}
